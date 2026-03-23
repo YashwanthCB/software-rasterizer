@@ -10,28 +10,10 @@
 const int width = 1280;
 const int height = 720;
 
-class Pipeline {
-public:
-    Pipeline(int width, int height) :
-    rasterizer(width, height), window(width, height), width(width), height(height) {
-
-    };
-
-    
-
-private:
-    Rasterizer rasterizer;
-    DisplayWindow window;
-
-    int width, height;
-};
-
 int main() {
 
     Rasterizer rasterizer{width, height};
     DisplayWindow window{width, height};
-
-    glm::vec3 point{0.0f, 0.0f, 0.0f};
 
     Triangle ndc_triangle {
         .a = {0.5f, 1.0f, 0.0f, 1.0f, 0.0f, 0.0f},
@@ -48,21 +30,3 @@ int main() {
         window.present(img);
     }
 }
-
-/*
- *
-*
-
-    TriangleDC triangle {
-        .a = {400, 500, 1, 255, 0, 0},
-        .b = {200, 300, 1, 0, 255, 0},
-        .c = {600, 100, 1, 0, 0, 255}
-    };
-
-    TriangleDC triangle2 {
-        .a = {400, 700, 1, 255, 0, 0},
-        .b = {100, 200, 1, 0, 255, 0},
-        .c = {300, 50, 1, 0, 0, 255}
-    };
-
- */
