@@ -1,12 +1,6 @@
 #include "Rasterizer.h"
 #include "DisplayWindow.h"
 
-#include "glm/glm.hpp"
-#include "glm/gtc/matrix_transform.hpp"
-#include "glm/gtc/type_ptr.hpp"
-#include "glm/gtc/random.hpp"
-
-
 const int width = 1280;
 const int height = 720;
 
